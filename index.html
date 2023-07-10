@@ -113,11 +113,11 @@
              <div class="input-group-sm" id="form" >
                 <form method="Form" name="invio"></form>
                 <label for="formGroupExampleInput" class="form-label">Type of work</label>
-                 <select class="form-select" aria-label="Default select example" id="form" onsubmit="validateForm()">
+                 <select class="form-select" aria-label="Default select example" id="formW">
                     <option selected></option>
-                  <option>Backend</option>
-                  <option>Frontend</option>
-                  <option>Analisi progettuale</option>
+                  <option id="option1">Backend</option>
+                  <option id="option2">Frontend</option>
+                  <option id="option3">Analisi progettuale</option>
                     </select>
                 </div>
                 </div>
@@ -161,7 +161,7 @@
 <div class="row">
 <div class="col-4"></div>
 <div class="col-4">
-    <button type="button" class="btn btn-warning mb-5">Send</button>
+    <button type="button" class="btn btn-warning mb-5" onsubmit="validateform(event)" id="button" >Send</button>
 
 
 

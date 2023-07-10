@@ -25,31 +25,49 @@ Quando l’utente clicca sul pulsante “Send”, se il codice promozionale inse
  facciamo diventare quest’ultimo di colore rosso.
 Se il codice inserito è valido, dopo aver calcolato il prezzo scontato, 
 eliminare quel codice dall’elenco dei codici sconto disponibili, in modo che non sia più utilizzabile. */
- let prezzo;
  
+let button = document.getElementById("button");
+
+button.addEventListener("click", function(event) {
+  event.preventDefault();
+let prezzo = validateform();
+document.getElementById("form-options").innerHTML = prezzo;
 
 
-document.getElementById("form-option").addEventListener("submit", function validateform(){
-let name = document.getElementById("name").value;
-let last_name = document.getElementById("last_name").value;
-let email = document.getElementById("email").value;
-let ora = document.getElementById("hours").value;
-let typeofwork = document.getElementById("form").value
- 
-if(typeofwork.value == Backend){
+
+
+}
+)
+
+
+
+
+
+
+
+
+function validateform() {
+let typeofwork = document.getElementById("formW").value
+let ora = parseInt(document.getElementById("hours").value);
+ let option1 = document.getElementById("option1");
+ let option2 = document.getElementById("option2").value;
+ let option3 = document.getElementById("option3").value;
+
+
+
+if(typeofwork.value == option1){
     return price = 20.5 * ora;
 
 }
-else if(typeofwork.value == Frontend){
-    return price = 15.3 * ora;}
+else if(typeofwork.value == option2){
+    return prezzo = 15.3 * ora;}
 else{
-    return  price =33.6 * ora;
+    return  prezzo = 33.6 * ora;
 }
 
-return price;
+return prezzo
 
 }
 
-)
 
-document.getElementById("form").innerHTML = prezzo;
+
