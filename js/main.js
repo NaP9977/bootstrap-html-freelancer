@@ -28,7 +28,8 @@ eliminare quel codice dall’elenco dei codici sconto disponibili, in modo che n
  
 let button = document.getElementById("button");
 
-let discount = ["YHDNU32","JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
+let discountcodes = ["YHDNU32","JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
+
 
 button.addEventListener("click", function(event) {
   event.preventDefault();
@@ -39,6 +40,8 @@ button.addEventListener("click", function(event) {
 function validateform() {
   let typeofwork = document.getElementById("formW").value;
   let ora = parseInt(document.getElementById("hours").value);
+  let discount = document.getElementById("discount").value
+ 
   let option1 = document.getElementById("option1").value;
   let option2 = document.getElementById("option2").value;
   let option3 = document.getElementById("option3").value;
@@ -50,5 +53,21 @@ function validateform() {
   } else {
     return 33.6 * ora;
   }
+
 }
+
+
+  for(i=0; i < discountcodes.lenght; i++){
+    if(discountcodes[i] == discount){
+        return prezzo = prezzo - 0.25 * prezzo ;
+    }
+    else{
+    console.log("Codice non valido");
+    }
+return prezzo;
+}
+
+
+
+
 
