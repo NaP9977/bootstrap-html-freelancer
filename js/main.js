@@ -28,46 +28,27 @@ eliminare quel codice dall’elenco dei codici sconto disponibili, in modo che n
  
 let button = document.getElementById("button");
 
+let discount = ["YHDNU32","JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
+
 button.addEventListener("click", function(event) {
   event.preventDefault();
-let prezzo = validateform();
-document.getElementById("form-options").innerHTML = prezzo;
-
-
-
-
-}
-)
-
-
-
-
-
-
-
+  let prezzo = validateform();
+  document.getElementById("form-options").innerHTML = "Il prezzo della commissione è " + prezzo;
+});
 
 function validateform() {
-let typeofwork = document.getElementById("formW").value
-let ora = parseInt(document.getElementById("hours").value);
- let option1 = document.getElementById("option1");
- let option2 = document.getElementById("option2").value;
- let option3 = document.getElementById("option3").value;
+  let typeofwork = document.getElementById("formW").value;
+  let ora = parseInt(document.getElementById("hours").value);
+  let option1 = document.getElementById("option1").value;
+  let option2 = document.getElementById("option2").value;
+  let option3 = document.getElementById("option3").value;
 
-
-
-if(typeofwork.value == option1){
-    return price = 20.5 * ora;
-
+  if (typeofwork == option1) {
+    return 20.5 * ora;
+  } else if (typeofwork == option2) {
+    return 15.3 * ora;
+  } else {
+    return 33.6 * ora;
+  }
 }
-else if(typeofwork.value == option2){
-    return prezzo = 15.3 * ora;}
-else{
-    return  prezzo = 33.6 * ora;
-}
-
-return prezzo
-
-}
-
-
 
