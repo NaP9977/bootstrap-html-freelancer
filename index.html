@@ -8,11 +8,12 @@
 </head>
 
 <body>
+    
     <div class="container-fluid p-0">
 <div class = "row bg-dark mx-0 text-info">
 <div class="col-1"></div>
     <div class="col-2">
-    <p class="text-end">Portfolio</p>
+    <a class="text-end">Portfolio</a>
     </div>
     <div class="col-6"></div>
     <div class="col-2">
@@ -36,10 +37,10 @@
     <h2>PORTFOLIO</h2>
    <div class="col-4"> 
     <img class="w-100" src="img/portfolio/cabin.png">
-    <div class=" w-100 border border-secondary-subtle text-center m-0 pb-3">
+    <div class=" w-100 border border-secondary-subtle text-center m-0 pb-3 px-2">
         <p class="fw-semibold">Cabin Website</p>
-        <button type="button" class="btn btn-info">Preview</button>
-        <button type="button" class="btn btn-outline-info">Visit Site</button>
+        <button type="button" class="btn btn-info mx-2">Preview</button>
+        <button type="button" class="btn btn-outline-info mx-2">Visit Site</button>
     </div>
  </div>
 
@@ -47,8 +48,8 @@
      <img class="w-100" src="img/portfolio/cake.png">
     <div class=" border border-secondary-subtle w-100 text-center m-0 pb-3">
         <p class="fw-semibold">Cake Website</p>
-        <button type="button" class="btn btn-info">Preview</button>
-        <button type="button" class="btn btn-outline-info">Visit site</button> 
+        <button type="button" class="btn btn-info mx-2">Preview</button>
+        <button type="button" class="btn btn-outline-info mx-2">Visit site</button> 
     </div>
 </div>
 
@@ -56,28 +57,28 @@
     <img class="w-100" src="img/portfolio/circus.png">
     <div class=" border border-secondary-subtle w-100 text-center m-0 pb-3">
         <p class="fw-semibold">circus Website</p>
-        <button type="button" class="btn btn-info">Preview</button>
-        <button type="button" class="btn btn-outline-info">Visit site</button> 
+        <button type="button" class="btn btn-info mx-2">Preview</button>
+        <button type="button" class="btn btn-outline-info mx-2">Visit site</button> 
     </div>
 
    </div>
 </div>
    
-<div class="row mx-2 mt-5 text center">
+<div id="Cards" class="row mx-2 mt-5 text center">
     <div class="col-4"> 
         <img class="w-100" src="img/portfolio/game.png">
         <div class=" border border-secondary-subtle w-100 text-center m-0 pb-3">
             <p class="fw-semibold">Game Website</p>
-            <button type="button" class="btn btn-info">Preview</button>
-            <button type="button" class="btn btn-outline-info">Visit site</button> 
+            <button type="button" class="btn btn-info mx-2">Preview</button>
+            <button type="button" class="btn btn-outline-info mx-2">Visit site</button> 
         </div>
  </div>
  <div class="col-4"> 
     <img class="w-100" src="img/portfolio/safe.png">
     <div class=" border border-secondary-subtle w-100 text-center m-0 pb-3">
         <p class="fw-semibold">Safe Website</p>
-        <button type="button" class="btn btn-info">Preview</button>
-        <button type="button" class="btn btn-outline-info">Visit site</button> 
+        <button type="button" class="btn btn-info mx-2">Preview</button>
+        <button type="button" class="btn btn-outline-info mx-2">Visit site</button> 
     </div>
     </div>
    
@@ -85,8 +86,8 @@
         <img class="w-100" src="img/portfolio/submarine.png">
         <div class=" border border-secondary-subtle w-100 text-center m-0 pb-3">
             <p class="fw-semibold">Submarine Website</p>
-            <button type="button" class="btn btn-info">Preview</button>
-            <button type="button" class="btn btn-outline-info">Visit site</button> 
+            <button type="button" class="btn btn-info mx-2">Preview</button>
+            <button type="button" class="btn btn-outline-info mx-2">Visit site</button> 
         </div>
     </div>
 
@@ -104,16 +105,22 @@
         <form>
             <div class="mb-3 text-start w-100 input-group-sm">
                 <label for="formGroupExampleInput" class="form-label">First Name</label>
-                <input type="text" class="form-control" placeholder="Enter your first name..." aria-label="Recipient's First Name" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Enter your first name..." aria-label="Recipient's First Name" aria-describedby="basic-addon2" id = "name">
               
                 <label for="formGroupExampleInput" class="form-label">Email address</label>
-                <input type="text" class="form-control" placeholder="name@example.com" aria-label="Recipient's Email" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="name@example.com" aria-label="Recipient's Email" aria-describedby="basic-addon2" id="Email" >
              
-             
+             <div class="input-group-sm" id="form" >
+                <form method="Form" name="invio"></form>
                 <label for="formGroupExampleInput" class="form-label">Type of work</label>
-                <select class="form-select" aria-label="Default select example">
+                 <select class="form-select" aria-label="Default select example" id="form" onsubmit="validateForm()">
+                    <option selected></option>
+                  <option>Backend</option>
+                  <option>Frontend</option>
+                  <option>Analisi progettuale</option>
                     </select>
-  </div>
+                </div>
+                </div>
 
         </form>
     </div>
@@ -122,11 +129,11 @@
 <form>
     <div class="mb-3 text-start w-100 input-group-sm">
         <label for="formGroupExampleInput" class="form-label">Last Name</label>
-        <input type="text" class="form-control" placeholder="Enter your last name..." aria-label="Recipient's Last Name" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="Enter your last name..." aria-label="Recipient's Last Name" aria-describedby="basic-addon2" id="last_name">
       
       
         <label for="formGroupExampleInput" class="form-label">Hours requested</label>
-        <input type="text" class="form-control" placeholder="Hours requested..." aria-label="Recipient's hours requested" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="Hours requested..." aria-label="Recipient's hours requested" aria-describedby="basic-addon2" id="hours">
 
             <label for="formGroupExampleInput" class="form-label">Discount</label>
             <input type="text" class="form-control" aria-label="Recipient's First Name" aria-describedby="basic-addon2">
@@ -144,7 +151,10 @@
             <div class="mb-3 text-start w-100 input-group-sm">
                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                 <textarea class="form-control"placeholder="Specify your work commission..." id="exampleFormControlTextarea1" rows="4"></textarea>
-        </div>
+       
+       
+       
+            </div>
         <div class="col-2"></div>
     </div>
 </div>
@@ -164,7 +174,7 @@
 </div>
 
 </div>
-
+ <script src="js/main.js"></script>
 
  </div>
  
